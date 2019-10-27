@@ -35,7 +35,7 @@ int s_print(char *str)
  *
  * Return: integer
  */
-int p_print()
+int p_print(void)
 {
 	_putchar('%');
 	return (1);

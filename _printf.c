@@ -1,5 +1,10 @@
 #include "holberton.h"
 
+/**
+ * _printf - prints anything
+ * @format: the string to print
+ * Return: an integer
+ */
 int _printf(char *format, ...)
 {
 	unsigned int i = 0, count = 0;
