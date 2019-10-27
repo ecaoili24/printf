@@ -7,5 +7,6 @@ int _putchar(char c);
 int c_print (int character);
 int s_print(char *str);
 int p_print(void);
+int _printf(char *format, ...);
 
 #endif /* HOLBERTON_H */
