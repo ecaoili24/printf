@@ -74,7 +74,11 @@ int _printf_ext_1(va_list val, char ch, unsigned int *p_i)
 				count += s_print(strTemp);
 			*p_i_count = *p_i_count + 1;
 			break;
-		default:
+	        case 'd':
+			id_print(va_arg(val, int));
+			*p_i_count = *p_i_count + 1;
+			break;
+	        default:
 			count += c_print('%');
 			count += c_print(ch);
 			*p_i_count = *p_i_count + 1;
