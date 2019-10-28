@@ -66,10 +66,14 @@ int _printf_ext_1(va_list val, char ch, unsigned int *p_i)
 			count += c_print(va_arg(val, int));
 			*p_i_count = *p_i_count + 1;
 			break;
+		case 'z':
+			count += c_print('%');
+			*p_i_count = *p_i_count + 1;
+			break;
 		default:
 			count += c_print('%');
 			count += c_print(ch);
-			*p_i_count = *p_i_count + 2;
+			*p_i_count = *p_i_count + 1;
 	}
 	return (count);
 }
