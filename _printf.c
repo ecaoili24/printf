@@ -26,17 +26,12 @@ int _printf(char *format, ...)
 			case '\0':
 				va_end(arg);
 				return (-1);
-			case 's':
-				count += s_print(va_arg(arg, char *));
-				i++;
-				break;
 			case '%':
 				count += p_print();
 				i++;
 				break;
 			default:
 				count += _printf_ext_1(arg, format[i + 1], p_i);
-				continue;
 			}
 		}
 		else
@@ -59,6 +54,7 @@ int _printf_ext_1(va_list val, char ch, unsigned int *p_i)
 {
 	unsigned int *p_i_count = p_i;
 	int count = 0;
+	char *strTemp;
 
 	switch (ch)
 	{
@@ -68,6 +64,14 @@ int _printf_ext_1(va_list val, char ch, unsigned int *p_i)
 			break;
 		case 'z':
 			count += c_print('%');
+			*p_i_count = *p_i_count + 1;
+			break;
+		case 's':
+			strTemp = va_arg(val, char *);
+			if (strTemp == NULL)
+				count += s_print("(null)");
+			else
+				count += s_print(strTemp);
 			*p_i_count = *p_i_count + 1;
 			break;
 		default:
