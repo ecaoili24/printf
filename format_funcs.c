@@ -46,8 +46,11 @@ int p_print(void)
 /**
  * id_print - prints percent i and percent d
  * @n: the integer to print
+ * @count: the total number of length in the string 
+ *
+ * Return: integer
  */
-void id_print(int n)
+int id_print(int n, int count)
 {
 	if (n < 0)
 	{
@@ -56,6 +59,8 @@ void id_print(int n)
 	}
 
 	if (n / 10)
-		_putchar((n / 10) + '0');
+		id_print(n / 10, count + 1);
 	_putchar(n % 10 + '0');
+
+	return (count);
 }
