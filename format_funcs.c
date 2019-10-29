@@ -79,12 +79,12 @@ int count_int(int n)
 {
 	int count = 0;
 
-	if (n < 0)
-		++count;
+	if (n <= 0)
+		count++;
 	while (n != 0)
 	{
 		n = n / 10;
-		++count;
+		count++;
 	}
 	return (count);
 }
