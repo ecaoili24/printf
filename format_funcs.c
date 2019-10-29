@@ -38,7 +38,7 @@ int s_print(char *str)
  *
  * Return: integer
  */
-int sr_print(char *str);
+int sr_print(char *str)
 {
 	int i = 0;
 	int count = 0;
