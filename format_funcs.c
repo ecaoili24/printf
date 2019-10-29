@@ -83,5 +83,5 @@ int count_int(int n)
 		n = n / 10;
 		++count;
 	}
-	return count; 	
+	return (count);
 }
