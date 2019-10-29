@@ -52,15 +52,16 @@ int p_print(void)
  */
 int id_print(int n, int count)
 {
+	unsigned int m;
 	if (n < 0)
 	{
 		_putchar('-');
-		n = -n;
+		m = -n;
 	}
-
-	if (n / 10)
-		id_print(n / 10, count + 1);
-	_putchar(n % 10 + '0');
+	m = n;
+	if (m / 10)
+		id_print(m / 10, count + 1);
+	_putchar(m % 10 + '0');
 
 	return (count);
 }
