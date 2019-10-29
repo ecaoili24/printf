@@ -74,10 +74,10 @@ int _printf_ext_1(va_list val, char ch, unsigned int *p_i)
 				count += s_print(strTemp);
 			*p_i_count = *p_i_count + 1;
 			break;
-		case 's':
+		case 'r':
 			strTemp = va_arg(val, char *);
 			if (strTemp == NULL)
-				count += sr_print("(null)");
+				count += s_print("(null)");
 			else
 				count += sr_print(strTemp);
 			*p_i_count = *p_i_count + 1;
