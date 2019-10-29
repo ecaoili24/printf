@@ -52,17 +52,20 @@ int p_print(void)
  */
 void id_print(int n)
 {
+	unsigned int m;
+
 	if (n < 0)
 	{
 		_putchar('-');
-		n = -n;
+		m = -n;
 	}
-
-	if (n / 10)
+	else
+		m = n;
+	if (m / 10)
 	{
-		id_print(n / 10);
+		id_print(m / 10);
 	}
-	_putchar(n % 10 + '0');
+	_putchar(m % 10 + '0');
 }
 
 /**
