@@ -45,8 +45,8 @@ int p_print(void)
 
 /**
  * id_print - prints percent i and percent d
- * @n: the integer to print
- * @count: the total number of length in the string 
+ * @n:the integer to print
+ * @count: the total number of length in the string
  *
  * Return: integer
  */
