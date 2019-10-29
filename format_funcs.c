@@ -50,18 +50,38 @@ int p_print(void)
  *
  * Return: integer
  */
-int id_print(int n, int count)
+void id_print(int n)
 {
-	unsigned int m;
 	if (n < 0)
 	{
 		_putchar('-');
-		m = -n;
+		n = -n;
 	}
-	m = n;
-	if (m / 10)
-		id_print(m / 10, count + 1);
-	_putchar(m % 10 + '0');
 
-	return (count);
+	if (n / 10)
+	{
+		id_print(n / 10);
+	}
+	_putchar(n % 10 + '0');
+}
+
+/**
+ * count_int - counts num len of int
+ * @n: the integer to print
+ *
+ *
+ * Return: integer
+ */
+int count_int(int n)
+{
+	int count = 0;
+
+	if (n < 0)
+		++count;
+	while (n != 0)
+	{
+		n = n / 10;
+		++count;
+	}
+	return count; 	
 }

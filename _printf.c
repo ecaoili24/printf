@@ -53,7 +53,7 @@ int _printf(char *format, ...)
 int _printf_ext_1(va_list val, char ch, unsigned int *p_i)
 {
 	unsigned int *p_i_count = p_i;
-	int count = 0;
+	int count = 0, tempNum;
 	char *strTemp;
 
 	switch (ch)
@@ -75,11 +75,10 @@ int _printf_ext_1(va_list val, char ch, unsigned int *p_i)
 			*p_i_count = *p_i_count + 1;
 			break;
 		case 'd':
-			count += id_print(va_arg(val, int), 0);
-			*p_i_count = *p_i_count + 1;
-			break;
 		case 'i':
-			count += id_print(va_arg(val, int), 0);
+			tempNum = va_arg(val, int);
+			id_print(tempNum);
+			count += count_int(tempNum);
 			*p_i_count = *p_i_count + 1;
 			break;
 		default:
