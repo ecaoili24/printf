@@ -1,3 +1,4 @@
+![Holberton](https://github.com/ecaoili24/printf/blob/master/wordmark_cherry72.png)
 # Printf Project
 ## Synopsis
 The printf function in the C programming language, prints output according to format. 
