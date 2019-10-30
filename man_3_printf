@@ -17,12 +17,15 @@ Also, the function writes the output according to the format string. This format
 The function returns the number of characters printed for success. Note: It excludes the null byte used to end output to strings.
 
 The function returns a negative value if an output error occurs.
+
 .B Format of the format string
 
 The format string is a character string. It contains zero or more directives. The directives are ordinary characters and do not include %, which are copied to the output stream. It also includes, conversion specifications that results in obtaining zero or more subsequent arguments. To introduce a conversion specification, a character % and a conversion specifier are used.
 
 The arguments must match to the correct conversion specifier.
+
 .B The conversion specifier
+
 A conversion specifier is a character that specifies the type of conversion to be used. It is used during input and output. It tells the compiler what type of data is in the varaible when printing using printf. The conversion specifiers and their use are:
 .Nm d, i
 The format specifier for the data type integer is %d and %i. The int argument is converted to a signed decimal notation. Their use is identical in prinf(), but in scanf(), they return different outputs. 
