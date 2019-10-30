@@ -1,12 +1,31 @@
-q.\" Manpage for printf.
+\" Manpage for printf.
 .\" Contact vivek@nixcraft.net.in to correct errors or typos.
-.TH man 8 "29 October 2019" "1.0" "printf man page"
+.TH PRINTF 3 "29 October 2019" "1.0" "printf man page"
 .SH NAME
-printf \- produce an output according to a format
+printf
 .SH SYNOPSIS
-printf [USERNAME]
+#include <stdio.h>
+
+int printf( char *format, ...)
 .SH DESCRIPTION
-nuseradd is high level shell program for adding users to LDAP server.  On Debian, administrators should usually use nuseradd.debian(8) instead.
+Print output according to format.
+
+Printf is a function that writes output to the stdout, which is the standard output stream.
+
+Also, the function writes the output according to the format string. This format string specifies how the following arguments are converted for output.
+
+.SH Return value
+The function returns the number of characters printed for success. Note: It excludes the null byte used to end output to strings.
+
+The function returns a negative value if an output error occurs.
+.SH Format of the format string
+The format string is a character string. It contains zero or more directives. The directives are ordinary characters and do not include %, which are copied to the output stream. It also includes, conversion specifications that results in obtaining zero or more subsequent arguments. To introduce a conversion specification, a character % and a conversion specifier are used.
+
+The arguments must match to the correct conversion specifier.
+.SH The conversion specifier
+A conversion specifier is a character that specifies the type of conversion to be used. The conversion specifiers and their use are:
+.SH d, i
+The int argument is converted to a signed decimal notation. 
 .SH OPTIONS
 The nuseradd does not take any options. However, you can supply username.
 .SH SEE ALSO
@@ -14,4 +33,4 @@ useradd(8), passwd(5), nuseradd.debian(8)
 .SH BUGS
 No known bugs.
 .SH AUTHOR
-Erika Caoili (1135@holbertonschool.com) and Kevin Paul Apostol (emai)
+Erika Caoili (1135@holbertonschool.com) and Kevin Paul Apostol (858@holbertoschool.com)
