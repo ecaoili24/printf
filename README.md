@@ -24,3 +24,5 @@ Printf is a function that writes output to the stdout, which is the standard out
 - No use of global variables
 - No more than 5 functions per file
 - Prototypes of the functions are in the holberton.h header file
+
+![Flowchart](https://imgur.com/a/Nxu6dzP)
