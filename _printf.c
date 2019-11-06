@@ -30,6 +30,10 @@ int _printf(char *format, ...)
 				count += p_print();
 				i++;
 				break;
+			case 'c':
+				count += c_print(va_arg(val, int));
+				*p_i_count = *p_i_count + 1;
+				break;
 			default:
 				count += _printf_ext_1(arg, format[i + 1], p_i);
 			}
@@ -58,10 +62,6 @@ int _printf_ext_1(va_list val, char ch, unsigned int *p_i)
 
 	switch (ch)
 	{
-		case 'c':
-			count += c_print(va_arg(val, int));
-			*p_i_count = *p_i_count + 1;
-			break;
 		case 'z':
 			count += c_print('%');
 			*p_i_count = *p_i_count + 1;
