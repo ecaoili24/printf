@@ -31,8 +31,8 @@ int _printf(char *format, ...)
 				i++;
 				break;
 			case 'c':
-				count += c_print(va_arg(val, int));
-				*p_i_count = *p_i_count + 1;
+				count += c_print(va_arg(arg, int));
+				i++;
 				break;
 			default:
 				count += _printf_ext_1(arg, format[i + 1], p_i);
