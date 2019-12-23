@@ -30,5 +30,6 @@ Printf is a function that writes output to the stdout, which is the standard out
 
 ### Authors
 [Kevin Paul Apostol](858@holbertonschool.com)
+
 [Erika Caoili](erika.caoili@gmail.com)
 
