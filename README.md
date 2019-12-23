@@ -27,3 +27,8 @@ Printf is a function that writes output to the stdout, which is the standard out
 - Prototypes of the functions are in the holberton.h header file
 
 ![Flowchart](https://github.com/ecaoili24/printf/blob/master/Printf%20(1).png)
+
+### Authors
+[Kevin Paul Apostol](858@holbertonschool.com)
+[Erika Caoili](erika.caoili@gmail.com)
+
